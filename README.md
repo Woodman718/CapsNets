@@ -61,7 +61,7 @@ LKC with different kernel sizes.  The N of the label ”kernel-N” indicates th
 
 2). Attention.
 
-![Atten]https://github.com/Woodman718/CapsNets/blob/main/Images/Attention.png#pic_center)
+![Atten](https://github.com/Woodman718/CapsNets/blob/main/Images/Attention.png#pic_center)
 
 3 Generalization Performance
 
