@@ -1,0 +1,20 @@
+def squash(inputs,ep_iter=n_iter,total=100):
+    beta = 1.45 - 0.22* (ep_iter/total)
+    mag_sq = torch.sum(inputs**2, dim=2, keepdim=True)
+    mag = torch.sqrt(mag_sq)
+    s = (mag_sq / (beta + mag_sq)) * (inputs / mag)
+    return s
+
+# A beta value of 1.3 is better for COVID-19 and CRC.
+
+
+class CapsNet(nn.Module):
+  def update_n_iter(self, ep_iter):
+      if ep_iter > 650:
+          pass
+      if ep_iter > 100 and ep_iter % 10 == 0:
+          ep_iter -=100
+          self.primary.n_iter = ep_iter
+          self.digits.n_iter = ep_iter
+          beta = 1.45 - 0.22* (ep_iter/100)
+          print(f"beta:{beta}")
