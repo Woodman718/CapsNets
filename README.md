@@ -33,6 +33,7 @@ Proposed(Ours) |99.37  |1.41  |2.74
 </td></tr> </table>
 
 2  Evaluation metrics on the HAM10000.
+
 1). Evaluation metrics and LCK
 <table> 
  <tr><th>Evaluation metrics</th><th> LKC(large-kernel convolution)</th></tr> 
