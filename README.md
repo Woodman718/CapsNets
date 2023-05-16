@@ -57,7 +57,9 @@ Proposed(Ours) |99.37  |1.41  |2.74
 </td></tr> </table>
 
 ```
-LKC with different kernel sizes.  The N of the label ”kernel-N” indicates the size of the convolution kernel.  For instance, kernel-21 means using an LKC with a 21×21 convolution kern
+LKC with different kernel sizes.  
+The N of the label ”kernel-N” indicates the size of the convolution kernel.  
+For instance, kernel-21 means using an LKC with a 21×21 convolution kernel.
 ```
 
 2). Attention.
