@@ -61,7 +61,7 @@ LKC with different kernel sizes.  The N of the label ”kernel-N” indicates th
 
 2). Attention.
 
-![Atten]https://github.com/Woodman718/CapsNets/blob/main/Images/Attention#pic_center)
+![Atten]https://github.com/Woodman718/CapsNets/blob/main/Images/Attention.png#pic_center)
 
 3 Generalization Performance
 
@@ -127,7 +127,8 @@ However, no color normalization was applied to these images. Consequently, stain
 
 ![Data](https://github.com/Woodman718/CapsNets/blob/main/Images/Aug-Dis.png)
 
-The distribution of the seven disease types before and after data augmentation. In the clusters of bars with the same color, the left bar represents the sample distribution after data augmentation, while the right bar represents the initial distribution of the dataset.
+The distribution of the seven disease types before and after data augmentation. 
+In the clusters of bars with the same color, the left bar represents the sample distribution after data augmentation, while the right bar represents the initial distribution of the dataset.
 
 ```
 Example of Skin lesions in HAM10000 dataset.
