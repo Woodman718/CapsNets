@@ -12,7 +12,7 @@ from einops.layers.torch import Rearrange
 loc_time = time.strftime("%H%M%S", time.localtime()) 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 ratio = 8
-c_outs= 128
+# c_outs= 128
 reduction = 1 # default:1
 n_iter = 0
 
@@ -34,8 +34,8 @@ class CapsNet(nn.Module):
                  output_unit_size = 16,):
         super().__init__()
         
-        self.Convolution = nn.Sequential(nn.Conv2d(conv_inputs, c_outs, 21,stride=2),
-                                        nn.BatchNorm2d(c_outs),
+        self.Convolution = nn.Sequential(nn.Conv2d(conv_inputs, conv_outputs, 21,stride=2),
+                                        nn.BatchNorm2d(conv_outputs),
                                         nn.ReLU(inplace=True),)
 
         
@@ -43,9 +43,7 @@ class CapsNet(nn.Module):
         # self.Pool = nn.FractionalMaxPool2d(3, output_size=(20))
         self.Pool = nn.AdaptiveMaxPool2d(20)
         #Attention
-        # self.CBAM = Conv_CBAM(conv_outputs,conv_outputs)
-        self.CBAM = Conv_CBAM(c_outs,conv_outputs)
-        # self.ECA = ECA(channels=conv_outputs)   
+        self.CBAM = Conv_CBAM(conv_outputs,conv_outputs)
         #Capsule
         self.primary = Primary_Caps(in_channels=conv_outputs,#128
                                     caps_units=primary_units,#8
@@ -61,7 +59,6 @@ class CapsNet(nn.Module):
         
     def forward(self, x):
         x = self.Convolution(x)
-        # x = self.ECA(x)
         x = self.Pool(x)      
         x = self.CBAM(x)
         out = self.digits(self.primary(x))
@@ -258,20 +255,3 @@ class ChannelAttention(nn.Module):
         max_out = self.fc2(self.relu1(self.fc1(self.max_pool(x))))
         out = avg_out + max_out
         return self.sigmoid(out)
-
-#0401
-class ECA(nn.Module):
-    def __init__(self, channels, gamma=2, b=1):
-        super(ECA, self).__init__()
-        self.avg_pool = nn.AdaptiveAvgPool2d(1)
-        self.conv = nn.Conv1d(1, 1, kernel_size=3, padding=1, bias=False)
-        self.sigmoid = nn.Sigmoid()
-        self.gamma = gamma
-        self.b = b
-        
-    def forward(self, x):
-        b, c, _, _ = x.size()
-        y = self.avg_pool(x)
-        y = self.conv(y.view(b, 1, c))
-        y = self.sigmoid(self.gamma * y + self.b)
-        return x * y.view(b, c, 1, 1)
