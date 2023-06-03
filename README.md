@@ -186,5 +186,14 @@ b
 If you use our method for your research or aplication, please consider citation:
 
 ```
-To be continued
+@ARTICLE{LanCapsNets,
+  author={Lan, Zhangli and Cai, Songbai and Zhu, Jiqiang and Xu, Yuantong},
+  journal={XXX on XXX}, 
+  title={A Novel Skin Cancer Assisted Diagnosis Method based on Capsule Networks with CBAM}, 
+  year={},
+  volume={},
+  number={},
+  pages={},
+  doi={10.36227/techrxiv.23291003},
+}
 ```
