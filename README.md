@@ -204,6 +204,7 @@ If you use our method for your research or aplication, please consider citation:
   volume={10},
   number={},
   pages={76261-76267},
-  doi={10.1109/ACCESS.2022.3181225}}
+  doi={10.1109/ACCESS.2022.3181225}
+}
 ```
 
