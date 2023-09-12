@@ -196,4 +196,14 @@ If you use our method for your research or aplication, please consider citation:
   pages={},
   doi={10.36227/techrxiv.23291003},
 }
+@ARTICLE{9791221,
+  author={Lan, Zhangli and Cai, Songbai and He, Xu and Wen, Xinpeng},
+  journal={IEEE Access}, 
+  title={FixCaps: An Improved Capsules Network for Diagnosis of Skin Cancer}, 
+  year={2022},
+  volume={10},
+  number={},
+  pages={76261-76267},
+  doi={10.1109/ACCESS.2022.3181225}}
 ```
+
