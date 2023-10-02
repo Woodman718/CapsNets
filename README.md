@@ -1,6 +1,6 @@
 ## Experimental equipment
 The proposed method is implemented using PyTorch.
-All experiments were conducted on a tower workstation equipped with an Intel Core i5-11400KF, an NVIDIA GeForce RTX 3070.
+All experiments were conducted on a tower workstation equipped with an Intel Core i5-11400KF and an NVIDIA GeForce RTX 3070.
 
 ## Results
 1. Evaluation metrics on the HAM10000 (Augment).
