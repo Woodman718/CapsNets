@@ -168,7 +168,7 @@ This is a slightly different version of the "NCT - CRC - HE - 100K" image set: T
  ![dis_data](https://github.com/Woodman718/CapsNets/blob/main/Images/Dis_NCT-CRC-HE-100K-NONORM.png)
 
 </td></tr>
-</table>)
+</table>
 
 ## 5. Dataset
 ![Data](https://github.com/Woodman718/CapsNets/blob/main/Images/Aug-Dis.png)
