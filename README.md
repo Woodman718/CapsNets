@@ -117,6 +117,7 @@ Proposed(Ours) |99.37  |1.41  |2.74
 
 #### 4.2.3 Generalization Performance
 **Dataset**:  https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database
+
 The COVID-19 Radiography Database consisted of 21165 images. Among them, covid(3616), normal(10192), opacity(6012), viral(1345).
 
 <table> 
@@ -139,6 +140,7 @@ The COVID-19 Radiography Database consisted of 21165 images. Among them, covid(3
 </table>
 
 **Source Data**: http://dx.doi.org/10.5281/zenodo.1214456
+
 Jakob Nikolas Kather, Johannes Krisam, et al., "Predicting survival from colorectal cancer histology slides using deep learning: A retrospective multicenter study," PLOS Medicine, vol. 16, no. 1, pp. 1–22, 01 2019.
 This is a slightly different version of the "NCT - CRC - HE - 100K" image set: This set contains 100,000 images in 9 tissue classes at 0.5 MPP and was created from the same raw data as "NCT - CRC - HE - 100K". However, no color normalization was applied to these images. Consequently, staining intensity and color slightly varies between the images. Please note that although this image set was created from the same data as "NCT - CRC - HE - 100K", the image regions are not completely identical because the selection of non - overlapping tiles from raw images was a stochastic process.
 
