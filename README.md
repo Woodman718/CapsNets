@@ -116,7 +116,7 @@ Proposed(Ours) |99.37  |1.41  |2.74
 ![Atten](https://github.com/Woodman718/CapsNets/blob/main/Images/Attention.png#pic_center)
 
 #### 4.2.3 Generalization Performance
-**Dataset**:  https://www.kaggle.com/datasets/tawsifurrahman/covid19 - radiography - database
+**Dataset**:  https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database
 The COVID-19 Radiography Database consisted of 21165 images. Among them, covid(3616), normal(10192), opacity(6012), viral(1345).
 
 <table> 
