@@ -22,14 +22,14 @@ conda install numpy seaborn prettytable matplotlib tqdm pillow scikit-learn ipyk
 ### 3.3 Install Extra Python Packages via Pip
 ```bash
 # Install packages for model size and FLOPs calculation, tensor operations, and model summary
-pip install thop einops torch - summary
+pip install thop einops torch-summary
 ```
 ### 3.4 Activate the Environment and Install Kernel (Optional for Jupyter)
 ```bash
 # Activate the 'pytorch-gpu' environment
 conda activate pytorch-gpu
 # Install the kernel for the 'pytorch-gpu' environment in Jupyter
-python - m ipykernel install --user --name pytorch-gpu --display-name "pytorch-gpu"
+python -m ipykernel install --user --name pytorch-gpu --display-name "pytorch-gpu"
 ```
 
 ### 3.5 Environment Verification
@@ -117,7 +117,7 @@ Proposed(Ours) |99.37  |1.41  |2.74
 
 #### 4.2.3 Generalization Performance
 **Dataset**:  https://www.kaggle.com/datasets/tawsifurrahman/covid19 - radiography - database
-The COVID - 19 Radiography Database consisted of 21165 images. Among them, covid(3616), normal(10192), opacity(6012), viral(1345).
+The COVID-19 Radiography Database consisted of 21165 images. Among them, covid(3616), normal(10192), opacity(6012), viral(1345).
 
 <table> 
 <tr><th>Evaluation Metrics</th><th>Distribution of the COVID-19 Radiography Dataset</th></tr> 
