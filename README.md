@@ -104,9 +104,11 @@ Proposed(Ours) |99.37  |1.41  |2.74
 |  vasc  |   0.8235  |  1.0   | 0.9032 |          |
 | overall:|   0.907   | 0.9344 | 0.9181 |  0.9652  |
 
-</td><td></table>
+</td><td>
 
 ![LKC](https://github.com/Woodman718/CapsNets/blob/main/Images/LKC.png#pic_center)
+
+</td></tr> </table>
 
 **Note**: LKC with different kernel sizes. The N of the label ”kernel - N” indicates the size of the convolution kernel. For instance, kernel-21 means using an LKC with a 21×21 convolution kernel.
 
