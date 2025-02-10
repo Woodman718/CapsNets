@@ -1,5 +1,3 @@
-# Skin Cancer Diagnosis with Capsule Networks README
-
 ## 1. Introduction
 This repository focuses on a novel skin cancer assisted diagnosis method based on Capsule Networks with CBAM. The following sections detail the experimental setup, results, dataset, and how to use the code.
 
