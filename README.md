@@ -17,7 +17,7 @@ conda create -n pytorch-gpu python = 3.10 pytorch == 1.13 torchvision==0.14.1 to
 ### 3.2 Install Additional Dependencies
 ```bash
 # Install essential Python libraries for data handling, visualization, and neural network - related operations
-conda install numpy seaborn prettytable matplotlib tqdm pillow scikit - learn ipykernel
+conda install numpy seaborn prettytable matplotlib tqdm pillow scikit-learn ipykernel
 ```
 ### 3.3 Install Extra Python Packages via Pip
 ```bash
@@ -26,9 +26,9 @@ pip install thop einops torch - summary
 ```
 ### 3.4 Activate the Environment and Install Kernel (Optional for Jupyter)
 ```bash
-# Activate the 'pytorch - gpu' environment
-conda activate pytorch - gpu
-# Install the kernel for the 'pytorch - gpu' environment in Jupyter
+# Activate the 'pytorch-gpu' environment
+conda activate pytorch-gpu
+# Install the kernel for the 'pytorch-gpu' environment in Jupyter
 python - m ipykernel install --user --name pytorch-gpu --display-name "pytorch-gpu"
 ```
 
@@ -104,7 +104,7 @@ Proposed(Ours) |99.37  |1.41  |2.74
 |  vasc  |   0.8235  |  1.0   | 0.9032 |          |
 | overall:|   0.907   | 0.9344 | 0.9181 |  0.9652  |
 
-</td><td>
+</td><td></table>
 
 ![LKC](https://github.com/Woodman718/CapsNets/blob/main/Images/LKC.png#pic_center)
 
