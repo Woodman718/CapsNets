@@ -12,7 +12,7 @@ To run the code, you need to set up the following environment:
 ```bash
 # Create a new Conda environment named 'pytorch - gpu' with Python 3.10 and specific versions of PyTorch and related libraries
 # The channels '-c pytorch - c nvidia' are used to fetch packages
-conda create -n pytorch - gpu python = 3.10 pytorch == 1.13 torchvision == 0.14.1 torchaudio == 1.13.1 pytorch - cuda = 11.7 - c pytorch - c nvidia
+conda create -n pytorch-gpu python = 3.10 pytorch == 1.13 torchvision==0.14.1 torchaudio==1.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 ```
 ### 3.2 Install Additional Dependencies
 ```bash
@@ -29,7 +29,7 @@ pip install thop einops torch - summary
 # Activate the 'pytorch - gpu' environment
 conda activate pytorch - gpu
 # Install the kernel for the 'pytorch - gpu' environment in Jupyter
-python - m ipykernel install --user --name pytorch - gpu --display - name "pytorch - gpu"
+python - m ipykernel install --user --name pytorch-gpu --display-name "pytorch-gpu"
 ```
 
 ### 3.5 Environment Verification
@@ -58,11 +58,13 @@ GPU		: NVIDIA GeForce RTX 3070
 
 ## 4. Results
 ### 4.1 Evaluation metrics on the HAM10000 (Augment)
-| Evaluation metrics | Comparison with other methods |
-| ---- | ---- |
-| 
+<table> 
+ <tr><th>Evaluation metrics</th><th>Comparison with other methods</th></tr> 
+<tr><td> 
+
+
 |  Type  | Precision | Recall |   F1  | Accuracy |
-| ---- | ---- | ---- | ---- | ---- |
+|:--------:|:-------:|:-------------:|:--------:|:----------:|
 | akiec  |   0.992   | 0.996  | 0.994  |          |
 |  bcc   |   0.9896  | 0.9961 | 0.9929 |          |
 |  bkl   |   0.9934  | 0.9882 | 0.9908 |          |
@@ -72,22 +74,27 @@ GPU		: NVIDIA GeForce RTX 3070
 |  vasc  |    1.0    |  1.0   |  1.0   |          |
 | overall:|   0.9941  | 0.994  | 0.9941 |  0.9937  |
 
-| Method |Accuracy [%] |Params(M)  |FLOPs(G)|
-| ---- | ---- | ---- | ---- |
-| Inception V3  |92.10  |22.80 |5.73|
-| ResNet 50 |92.31 |25.60 |4.10|
-| DenseNet - 201 |92.87  |20.01|4.28|
-| IRv2 - SA |93.47  |47.5 |25.46|
-| IM - CNN  |95.10 |-|-|
-| Proposed(Ours) |99.37  |1.41  |2.74|
+</td><td>
+
+|Method |Accuracy [%] |Params(M)  |FLOPs(G)|
+|:--------:|:-------------:|:-------------:|:-------------:|
+Inception V3  |92.10  |22.80 |5.73
+ResNet 50 |92.31 |25.60 |4.10
+DenseNet-201 |92.87  |20.01|4.28
+IRv2-SA |93.47  |47.5 |25.46
+IM-CNN  |95.10 |-|-
+Proposed(Ours) |99.37  |1.41  |2.74
+
+</td></tr> </table>
 
 ### 4.2 Evaluation metrics on the HAM10000
 #### 4.2.1 Evaluation metrics and LCK
-| Evaluation metrics |  LKC(large - kernel convolution) |
-| ---- | ---- |
-| 
+<table> 
+ <tr><th>Evaluation metrics</th><th> LKC(large-kernel convolution)</th></tr> 
+<tr><td> 
+
 |  Type  | Precision | Recall |   F1  | Accuracy |
-| ---- | ---- | ---- | ---- | ---- |
+|:--------:|:-------:|:-------------:|:--------:|:----------:|
 | akiec  |    1.0    | 0.9394 | 0.9687 |          |
 |  bcc   |   0.8983  |  1.0   | 0.9464 |          |
 |  bkl   |   0.9444  | 0.9027 | 0.9231 |          |
@@ -97,9 +104,11 @@ GPU		: NVIDIA GeForce RTX 3070
 |  vasc  |   0.8235  |  1.0   | 0.9032 |          |
 | overall:|   0.907   | 0.9344 | 0.9181 |  0.9652  |
 
+</td><td>
+
 ![LKC](https://github.com/Woodman718/CapsNets/blob/main/Images/LKC.png#pic_center)
 
-**Note**: LKC with different kernel sizes. The N of the label ”kernel - N” indicates the size of the convolution kernel. For instance, kernel - 21 means using an LKC with a 21×21 convolution kernel.
+**Note**: LKC with different kernel sizes. The N of the label ”kernel - N” indicates the size of the convolution kernel. For instance, kernel-21 means using an LKC with a 21×21 convolution kernel.
 
 #### 4.2.2 Attention
 ![Atten](https://github.com/Woodman718/CapsNets/blob/main/Images/Attention.png#pic_center)
@@ -108,28 +117,37 @@ GPU		: NVIDIA GeForce RTX 3070
 **Dataset**:  https://www.kaggle.com/datasets/tawsifurrahman/covid19 - radiography - database
 The COVID - 19 Radiography Database consisted of 21165 images. Among them, covid(3616), normal(10192), opacity(6012), viral(1345).
 
-| Evaluation Metrics | Distribution of the COVID - 19 Radiography Dataset |
-| ---- | ---- |
-| 
+<table> 
+<tr><th>Evaluation Metrics</th><th>Distribution of the COVID-19 Radiography Dataset</th></tr> 
+<tr><td> 
+
 |  Type  | Precision | Recall |  F1  | Accuracy |
-| ---- | ---- | ---- | ---- | ---- |
+|:--------:|:-------------:|:-------------:|:--------:|:----------:|
 |  covid  |   0.9972  |  1.0   | 0.999 |          |
 |  normal |   0.999   | 0.996  | 0.998 |          |
 | opacity |   0.995   | 0.997  | 0.996 |          |
 |  viral  |   0.9926  |  1.0   | 0.996 |          |
 |  overall: |           |        |       |  0.9972  |
 
-![dis_data](https://github.com/Woodman718/CapsNets/blob/main/Images/Dis_COVID-19_data.png)
+</td><td>
+
+ ![dis_data](https://github.com/Woodman718/CapsNets/blob/main/Images/Dis_COVID-19_data.png)
+
+</td></tr>
+</table>
 
 **Source Data**: http://dx.doi.org/10.5281/zenodo.1214456
 Jakob Nikolas Kather, Johannes Krisam, et al., "Predicting survival from colorectal cancer histology slides using deep learning: A retrospective multicenter study," PLOS Medicine, vol. 16, no. 1, pp. 1–22, 01 2019.
 This is a slightly different version of the "NCT - CRC - HE - 100K" image set: This set contains 100,000 images in 9 tissue classes at 0.5 MPP and was created from the same raw data as "NCT - CRC - HE - 100K". However, no color normalization was applied to these images. Consequently, staining intensity and color slightly varies between the images. Please note that although this image set was created from the same data as "NCT - CRC - HE - 100K", the image regions are not completely identical because the selection of non - overlapping tiles from raw images was a stochastic process.
 
-| Evaluation Metrics | NCT - CRC - HE - 100K - NONORM |
-| ---- | ---- |
-| 
+<table> 
+<tr><th>Evaluation Metrics</th><th>NCT-CRC-HE-100K-NONORM</th></tr> 
+<tr><td> 
+
+
+
 |  Type  | Precision | Recall |  F1  | Accuracy |
-| ---- | ---- | ---- | ---- | ---- |
+|:---------|:-------------:|:-------------:|:--------:|:----------:|
 |  ADI   |    1.0    |  1.0   |  1.0  |          |
 |  BACK  |    1.0    |  1.0   |  1.0  |          |
 |  DEB   |    1.0    |  1.0   |  1.0  |          |
@@ -141,7 +159,12 @@ This is a slightly different version of the "NCT - CRC - HE - 100K" image set: T
 |  TUM   |   0.9979  | 0.999  | 0.999 |          |
 | overall: |           |        |       |  0.9991  |
 
-![dis_data](https://github.com/Woodman718/CapsNets/blob/main/Images/Dis_NCT-CRC-HE-100K-NONORM.png)
+</td><td>
+
+ ![dis_data](https://github.com/Woodman718/CapsNets/blob/main/Images/Dis_NCT-CRC-HE-100K-NONORM.png)
+
+</td></tr>
+</table>)
 
 ## 5. Dataset
 ![Data](https://github.com/Woodman718/CapsNets/blob/main/Images/Aug-Dis.png)
