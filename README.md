@@ -181,7 +181,6 @@ The distribution of the seven disease types before and after data augmentation. 
 **Available at**:
 - https://challenge.isic-archive.com/data/#2018
 - https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T
-- https://aistudio.baidu.com/aistudio/datasetdetail/218024 (ours)
 
 **Citation**:
 P. Tschandl, C. Rosendahl, and H. Kittler, “The ham10000 dataset,a large collection of multi - source dermatoscopic images of common pigmented skin lesions,” Scientific data, vol. 5, no. 1, pp. 1–9, 2018.
@@ -230,18 +229,5 @@ If you use our method for your research or application, please consider citation
   number={},
   pages={},
   doi={10.36227/techrxiv.23291003},
-}
-```
-### 8.2
-```
-@ARTICLE{9791221,
-  author={Lan, Zhangli and Cai, Songbai and He, Xu and Wen, Xinpeng},
-  journal={IEEE Access}, 
-  title={FixCaps: An Improved Capsules Network for Diagnosis of Skin Cancer}, 
-  year={2022},
-  volume={10},
-  number={},
-  pages={76261 - 76267},
-  doi={10.1109/ACCESS.2022.3181225}
 }
 ```
