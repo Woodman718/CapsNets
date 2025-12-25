@@ -192,19 +192,3 @@ The dataset is released under a Creative Commons Attribution 4.0 License. For mo
   publisher={IEEE}
 }
 ```
-
-## 8. Citation
-If you use our method for your research or application, please consider citation:
-### 8.1
-```
-@ARTICLE{CapsNets,
-  author={Lan, Zhangli and Cai, Songbai and Zhu, Jiqiang and Xu, Yuantong},
-  journal={XXX on XXX}, 
-  title={A Novel Skin Cancer Assisted Diagnosis Method based on Capsule Networks with CBAM}, 
-  year={},
-  volume={},
-  number={},
-  pages={},
-  doi={10.36227/techrxiv.23291003},
-}
-```
