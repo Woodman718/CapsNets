@@ -1,3 +1,6 @@
+**Note:** This repository corresponds to an early exploratory study focused on data augmentation strategies.
+The current work adopts a fundamentally different routing and inference framework and is maintained separately.
+
 ## 1. Introduction
 This repository focuses on a novel skin cancer assisted diagnosis method based on Capsule Networks with CBAM. The following sections detail the experimental setup, results, dataset, and how to use the code.
 
