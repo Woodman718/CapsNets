@@ -33,29 +33,6 @@ conda activate pytorch-gpu
 python -m ipykernel install --user --name pytorch-gpu --display-name "pytorch-gpu"
 ```
 
-### 3.5 Environment Verification
-You can verify the installation with the following Python code:
-```python
-import torch
-import torchvision
-import torchaudio
-print('Pytorch version\t:', torch.__version__)
-print('Torchvision \t:', torchvision.__version__)
-print('Torchaudio \t:', torchaudio.__version__)
-print('CUDA version\t:', torch.version.cuda)
-print('CUDA status\t:', torch.cuda.is_available())
-print('GPU\t\t:', torch.cuda.get_device_name())
-```
-**Sample Output**:
-```
-# pytorch - gpu #
-Pytorch version	: 1.13.1+cu117
-Torchvision 	: 0.14.1+cu117
-Torchaudio 	: 0.13.1+cu117
-CUDA version	: 11.7
-CUDA status	: True
-GPU		: NVIDIA GeForce RTX 3070
-```
 
 ## 4. Results
 ### 4.1 Evaluation metrics on the HAM10000 (Augment)
