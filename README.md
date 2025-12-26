@@ -195,7 +195,7 @@ The dataset is released under a Creative Commons Attribution 4.0 License. For mo
 
 ## 8. Citation
 
-If you use FixCaps for your research or aplication, please consider citation:
+If you use CapsNets for your research or aplication, please consider citation:
 
 ```
 @ARTICLE{9791221,
